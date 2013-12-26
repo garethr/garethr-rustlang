@@ -4,6 +4,7 @@ describe 'rustlang', :type => :class do
   let(:facts) { {:osfamily => 'Debian', :lsbdistcodename => 'precise'} }
 
   context 'with no parameters' do
+    it { should compile.with_all_deps }
     it { should include_class('apt') }
     it { should contain_package('rustlang').with_name('rust-0.8').with_ensure('present') }
     it { should contain_apt__ppa('ppa:hansjorg/rust') }
