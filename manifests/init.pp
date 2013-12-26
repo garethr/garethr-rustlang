@@ -7,7 +7,11 @@
 # === Parameters
 # [*package_name*]
 #   Which package you want. Valid values are rust-0.x
-#   and rust-nightly.
+#   and rust-nightly. Defaults to rust-0.8.
+#
+# [*ensure*]
+#   Whether to install or remove the package. Can be either
+#   absent or present. Defaults to present.
 #
 class rustlang(
   $package_name = 'rust-0.8',
