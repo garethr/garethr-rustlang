@@ -1,10 +1,14 @@
 require 'spec_helper'
 
 describe 'rustlang', :type => :class do
-  let(:facts) { {:osfamily => 'Debian', :lsbdistcodename => 'precise'} }
+  let(:facts) { {
+    :osfamily => 'Debian',
+    :operatingsystem => 'Ubuntu',
+    :lsbdistid => 'debian',
+    :lsbdistcodename => 'precise'
+  } }
 
   context 'with no parameters' do
-    it { should compile.with_all_deps }
     it { should include_class('apt') }
     it { should contain_package('rustlang').with_name('rust-0.8').with_ensure('present') }
     it { should contain_apt__ppa('ppa:hansjorg/rust') }
@@ -48,7 +52,7 @@ describe 'rustlang', :type => :class do
     it do
       expect {
         should contain_package('rustlang')
-      }.to raise_error(Puppet::Error, /This module uses PPA repos/)
+      }.to raise_error(Puppet::Error, /Unsupported osfamily/)
     end
   end
 
