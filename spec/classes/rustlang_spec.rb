@@ -10,7 +10,7 @@ describe 'rustlang', :type => :class do
 
   context 'with no parameters' do
     it { should include_class('apt') }
-    it { should contain_package('rustlang').with_name('rust-0.8').with_ensure('present') }
+    it { should contain_package('rustlang').with_name('rust-stable').with_ensure('present') }
     it { should contain_apt__ppa('ppa:hansjorg/rust') }
   end
 

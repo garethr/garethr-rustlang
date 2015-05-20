@@ -7,7 +7,7 @@
 # === Parameters
 # [*package_name*]
 #   Which package you want. Valid values are rust-0.x
-#   and rust-nightly. Defaults to rust-0.8.
+#   and rust-nightly. Defaults to rust-stable.
 #
 # [*ensure*]
 #   Whether to install or remove the package. Can be either
