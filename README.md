@@ -12,5 +12,5 @@ The module includes a single class:
 
     include 'rustlang'
 
-By default this sets up the PPA and installs the rust-0.8 package.
+By default this sets up the PPA and installs the rust-stable package.
 See the code for ways to get rust-nightly or other versions.
