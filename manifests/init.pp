@@ -14,7 +14,7 @@
 #   absent or present. Defaults to present.
 #
 class rustlang(
-  $package_name = 'rust-0.8',
+  $package_name = 'rust-stable',
   $ensure = 'present',
 ) {
   include apt
